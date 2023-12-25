@@ -1,0 +1,16 @@
+{
+  "name": "personal-crm",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/nuhgooyin/Personal-CRM",
+  "main": "Main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "type": "module",
+  "private": true,
+  "mocha": "^10.2.0",
+  "dependencies": {
+    "selenium-webdriver": "^4.16.0"
+  }
+}
