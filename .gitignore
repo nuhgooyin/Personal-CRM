@@ -1,6 +1,5 @@
 .*/
-out/
-*.xml
-*.iml
-*.log
-*.class
+coverage/
+.gitattributes
+.idea/
+node_modules/

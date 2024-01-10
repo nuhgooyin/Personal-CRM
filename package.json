@@ -5,12 +5,22 @@
   "homepage": "https://github.com/nuhgooyin/Personal-CRM",
   "main": "Main.js",
   "scripts": {
-    "test": "jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "type": "module",
   "private": true,
   "mocha": "^10.2.0",
   "dependencies": {
-    "selenium-webdriver": "^4.16.0"
+    "@babel/preset-env": "^7.23.6",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "selenium-webdriver": "^4.16.0",
+    "ts-jest": "^29.1.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "jest": {
+    "transform": {}
   }
 }

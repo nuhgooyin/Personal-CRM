@@ -1,18 +1,12 @@
-const Builder = require('selenium-webdriver');
-// const InstagramTracker = require('../Trackers/InstagramTracker.js');
+import assert from 'assert';
+import {InstagramTracker} from "../Trackers/InstagramTracker.js";
+import {Builder} from 'selenium-webdriver';
 
+test('check for any exceptions when logging in', async ()=> {
+    const driver = new Builder().forBrowser('chrome').build();
+    const tracker = new InstagramTracker(driver, 'thomas.li9034', 'WAJK&tegw43%$y', ['fyra.finance']);
 
-// Setup driver
-(async function init() {
-    const driver = await new Builder().forBrowser('chrome').build();
-
-}())
-
-testLogin('check for any exceptions when logging in', ()=> {
-    try {
-        // const tracker = new InstagramTracker(driver, 'fyra.finance', '$N%y1LKKw3bs', ['nuhgooyin']);
-        // tracker.login();
-    } catch (e) {
-
+    for (let i = 0; i < 1; i++) {
+        assert (await tracker.login());
     }
 });

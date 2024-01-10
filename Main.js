@@ -12,12 +12,13 @@ import {Builder} from 'selenium-webdriver';
 
     // Instantiate InstagramTracker bot
     const driver = await new Builder().forBrowser('chrome').build();
-    const igBot = new InstagramTracker(driver, 'fyra.finance', '$N%y1LKKw3bs', ['nuhgooyin']);
+    const igBot = new InstagramTracker(driver, 'USERNAME', 'PASSWORD', ['SOMEUSERNAME']);
 
     // Tell the bot to login & record msg dates
-    await igBot.login();
-    // await igBot.closePopUps();
-    // await igBot.recordRecentMsgDates();
+    console.log(await igBot.login());
+    console.log(await igBot.closePopUps());
+    console.log(await igBot.recordRecentMsgDates());
+    //await igBot.closePopUps();
 
     // Print the gathered info. and quit
     console.log(igBot.trackedUsers)
